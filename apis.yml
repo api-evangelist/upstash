@@ -1,0 +1,72 @@
+aid: upstash
+name: Upstash
+description: >-
+  Upstash provides serverless data platforms including managed Redis, Kafka,
+  QStash messaging, and Vector databases optimized for serverless and edge
+  applications with per-request pricing. The platform offers low-latency global
+  replication, REST APIs for stateless access from edge runtimes, and SDKs for
+  popular serverless frameworks. The Upstash Developer API enables programmatic
+  management of databases, teams, and account resources using HTTP Basic
+  authentication (email + API key).
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Serverless
+  - Redis
+  - Kafka
+  - Messaging
+  - Vector Database
+  - Edge Computing
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/upstash/refs/heads/main/apis.yml
+created: '2026-05-11'
+modified: '2026-05-11'
+specificationVersion: '0.19'
+apis:
+  - aid: upstash:developer-api
+    name: Upstash Developer API
+    description: >-
+      Management API for creating and administering Upstash Redis, Kafka, and
+      Vector databases, teams, and account resources. Uses HTTP Basic
+      authentication with email and API key credentials.
+    humanURL: https://upstash.com/docs/devops/developer-api
+    baseURL: https://api.upstash.com/v2
+    tags:
+      - Serverless
+      - Database Management
+      - Redis
+      - Kafka
+      - Vector Database
+    properties:
+      - type: Documentation
+        url: https://upstash.com/docs/devops/developer-api
+      - type: Getting Started
+        url: https://upstash.com/docs/devops/developer-api/introduction
+  - aid: upstash:redis-rest-api
+    name: Upstash Redis REST API
+    description: >-
+      Per-database REST API for executing Redis commands over HTTPS from edge
+      and serverless runtimes. Uses Bearer token authentication scoped to
+      individual Redis databases.
+    humanURL: https://upstash.com/docs/redis/features/restapi
+    baseURL: https://<endpoint>.upstash.io
+    tags:
+      - Redis
+      - Serverless
+      - Edge Computing
+    properties:
+      - type: Documentation
+        url: https://upstash.com/docs/redis/features/restapi
+
+common:
+  - type: Website
+    url: https://upstash.com
+  - type: Documentation
+    url: https://upstash.com/docs
+  - type: Pricing
+    url: https://upstash.com/pricing
+  - type: Sign Up
+    url: https://console.upstash.com
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
