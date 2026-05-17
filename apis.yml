@@ -40,7 +40,7 @@ apis:
     properties:
       - type: Documentation
         url: https://upstash.com/docs/devops/developer-api
-      - type: Getting Started
+      - type: GettingStarted
         url: https://upstash.com/docs/devops/developer-api/introduction
   - aid: upstash:redis-rest-api
     name: Upstash Redis REST API
@@ -65,7 +65,7 @@ common:
     url: https://upstash.com/docs
   - type: Pricing
     url: https://upstash.com/pricing
-  - type: Sign Up
+  - type: SignUp
     url: https://console.upstash.com
 maintainers:
   - FN: Kin Lane
