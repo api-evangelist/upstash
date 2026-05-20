@@ -59,6 +59,10 @@ apis:
         url: https://upstash.com/docs/redis/features/restapi
 
 common:
+  - type: GitHubOrganization
+    url: https://github.com/upstash
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/upstash
   - type: Website
     url: https://upstash.com
   - type: Documentation
