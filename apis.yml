@@ -71,6 +71,8 @@ common:
     url: https://upstash.com/pricing
   - type: SignUp
     url: https://console.upstash.com
+  - type: LLMsTxt
+    url: https://upstash.com/llms.txt
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
