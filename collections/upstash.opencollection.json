@@ -1,0 +1,245 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Upstash APIs",
+    "version": "2.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Redis",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Redis databases",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.upstash.com/v2/redis/databases",
+            "auth": {
+              "type": "basic",
+              "username": "{{username}}",
+              "password": "{{password}}"
+            }
+          },
+          "docs": "List Redis databases"
+        },
+        {
+          "info": {
+            "name": "Create a Redis database",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.upstash.com/v2/redis/databases",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "basic",
+              "username": "{{username}}",
+              "password": "{{password}}"
+            }
+          },
+          "docs": "Create a Redis database"
+        },
+        {
+          "info": {
+            "name": "Retrieve a Redis database",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.upstash.com/v2/redis/database/:databaseId",
+            "params": [
+              {
+                "name": "databaseId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "auth": {
+              "type": "basic",
+              "username": "{{username}}",
+              "password": "{{password}}"
+            }
+          },
+          "docs": "Retrieve a Redis database"
+        },
+        {
+          "info": {
+            "name": "Delete a Redis database",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.upstash.com/v2/redis/database/:databaseId",
+            "params": [
+              {
+                "name": "databaseId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "auth": {
+              "type": "basic",
+              "username": "{{username}}",
+              "password": "{{password}}"
+            }
+          },
+          "docs": "Delete a Redis database"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Kafka",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Kafka clusters",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.upstash.com/v2/kafka/clusters",
+            "auth": {
+              "type": "basic",
+              "username": "{{username}}",
+              "password": "{{password}}"
+            }
+          },
+          "docs": "List Kafka clusters"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Vector",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List vector indexes",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.upstash.com/v2/vector/index",
+            "auth": {
+              "type": "basic",
+              "username": "{{username}}",
+              "password": "{{password}}"
+            }
+          },
+          "docs": "List vector indexes"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Teams",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List teams",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.upstash.com/v2/teams",
+            "auth": {
+              "type": "basic",
+              "username": "{{username}}",
+              "password": "{{password}}"
+            }
+          },
+          "docs": "List teams"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "RedisCommand",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Execute a Redis pipeline",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.upstash.com/v2/pipeline",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Execute multiple Redis commands in a single round trip against the\nper-database Redis REST API. Request body is a JSON array of\ncommands, where each command is itself an array starting with the\ncommand name.\n"
+        },
+        {
+          "info": {
+            "name": "Execute Redis commands atomically",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.upstash.com/v2/multi-exec",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Execute a batch of Redis commands as an atomic MULTI/EXEC transaction."
+        },
+        {
+          "info": {
+            "name": "Publish a message to a pub/sub channel",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.upstash.com/v2/publish/:channel/:message",
+            "params": [
+              {
+                "name": "channel",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "message",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Publish a message to a pub/sub channel"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
