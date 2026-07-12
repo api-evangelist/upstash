@@ -59,6 +59,10 @@ apis:
         url: https://upstash.com/docs/redis/features/restapi
 
 common:
+  - type: DomainSecurity
+    url: security/upstash-domain-security.yml
+  - type: Authentication
+    url: authentication/upstash-authentication.yml
   - type: GitHubOrganization
     url: https://github.com/upstash
   - type: LinkedIn
@@ -73,6 +77,8 @@ common:
     url: https://console.upstash.com
   - type: LlmsText
     url: https://upstash.com/llms.txt
+  - url: https://upstash.com/blog/feed.xml
+    type: Blog
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com

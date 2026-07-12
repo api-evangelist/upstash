@@ -1,0 +1,19 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/upstash-openapi.yml
+summary:
+  types:
+  - http
+schemes:
+- name: basicAuth
+  type: http
+  scheme: basic
+  description: HTTP Basic auth with Upstash account email and API key.
+  sources:
+  - openapi/upstash-openapi.yml
+- name: bearerAuth
+  type: http
+  scheme: bearer
+  description: Database-scoped bearer token issued from the Upstash console.
+  sources:
+  - openapi/upstash-openapi.yml
