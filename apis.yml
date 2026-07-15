@@ -59,6 +59,8 @@ apis:
         url: https://upstash.com/docs/redis/features/restapi
 
 common:
+  - type: AgenticAccess
+    url: agentic-access/upstash-agentic-access.yml
   - type: DomainSecurity
     url: security/upstash-domain-security.yml
   - type: Authentication
