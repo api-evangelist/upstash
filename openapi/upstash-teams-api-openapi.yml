@@ -1,0 +1,64 @@
+openapi: 3.1.0
+info:
+  title: Upstash APIs Kafka Teams API
+  version: 2.0.0
+  summary: Developer (management) API and Redis REST API for Upstash.
+  description: "Upstash exposes two distinct HTTP API surfaces:\n\n1. The Developer (Management) API at https://api.upstash.com/v2 — used\n   to programmatically create and administer Upstash Redis, Kafka, and\n   Vector databases, teams, and account-level resources. Authentication\n   is HTTP Basic using account email + API key.\n\n2. The per-database Redis REST API at https://{endpoint}.upstash.io —\n   used to execute Redis commands over HTTPS from edge and serverless\n   runtimes. Authentication is a Bearer token scoped to the database\n   (or via ?_token=... query parameter).\n\nEndpoint surface confirmed against https://upstash.com/docs/devops/developer-api\nand https://upstash.com/docs/redis/features/restapi.\n"
+  contact:
+    name: Upstash Docs
+    url: https://upstash.com/docs
+  license:
+    name: Proprietary
+    url: https://upstash.com/static/docs/terms.pdf
+servers:
+- url: https://api.upstash.com/v2
+  description: Upstash Developer (management) API
+- url: https://{endpoint}.upstash.io
+  description: Per-database Redis REST API endpoint
+  variables:
+    endpoint:
+      default: example-12345
+      description: Database-specific endpoint hostname from the Upstash console
+tags:
+- name: Teams
+  description: Team and member management
+paths:
+  /teams:
+    get:
+      tags:
+      - Teams
+      summary: List teams
+      operationId: listTeams
+      security:
+      - basicAuth: []
+      servers:
+      - url: https://api.upstash.com/v2
+      responses:
+        '200':
+          description: Team collection
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Team'
+components:
+  schemas:
+    Team:
+      type: object
+      properties:
+        team_id:
+          type: string
+        team_name:
+          type: string
+        copy_cc:
+          type: boolean
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+      description: HTTP Basic auth with Upstash account email and API key.
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: Database-scoped bearer token issued from the Upstash console.
