@@ -9,7 +9,19 @@ description: >-
   management of databases, teams, and account resources using HTTP Basic
   authentication (email + API key).
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/upstash.png
 tags:
   - Serverless
   - Redis
@@ -23,41 +35,88 @@ created: '2026-05-11'
 modified: '2026-05-11'
 specificationVersion: '0.19'
 apis:
-  - aid: upstash:developer-api
-    name: Upstash Developer API
-    description: >-
-      Management API for creating and administering Upstash Redis, Kafka, and
-      Vector databases, teams, and account resources. Uses HTTP Basic
-      authentication with email and API key credentials.
-    humanURL: https://upstash.com/docs/devops/developer-api
-    baseURL: https://api.upstash.com/v2
-    tags:
-      - Serverless
-      - Database Management
-      - Redis
-      - Kafka
-      - Vector Database
-    properties:
-      - type: Documentation
-        url: https://upstash.com/docs/devops/developer-api
-      - type: GettingStarted
-        url: https://upstash.com/docs/devops/developer-api/introduction
-  - aid: upstash:redis-rest-api
-    name: Upstash Redis REST API
-    description: >-
-      Per-database REST API for executing Redis commands over HTTPS from edge
-      and serverless runtimes. Uses Bearer token authentication scoped to
-      individual Redis databases.
-    humanURL: https://upstash.com/docs/redis/features/restapi
-    baseURL: https://<endpoint>.upstash.io
-    tags:
-      - Redis
-      - Serverless
-      - Edge Computing
-    properties:
-      - type: Documentation
-        url: https://upstash.com/docs/redis/features/restapi
-
+- aid: upstash:developer-api
+  name: Upstash Developer API
+  description: >-
+    Management API for creating and administering Upstash Redis, Kafka, and Vector databases, teams, and
+    account resources. Uses HTTP Basic authentication with email and API key credentials.
+  humanURL: https://upstash.com/docs/devops/developer-api
+  baseURL: https://api.upstash.com/v2
+  tags:
+  - Serverless
+  - Database Management
+  - Redis
+  - Kafka
+  - Vector Database
+  properties:
+  - type: Documentation
+    url: https://upstash.com/docs/devops/developer-api
+  - type: GettingStarted
+    url: https://upstash.com/docs/devops/developer-api/introduction
+- aid: upstash:redis-rest-api
+  name: Upstash Redis REST API
+  description: >-
+    Per-database REST API for executing Redis commands over HTTPS from edge and serverless runtimes. Uses
+    Bearer token authentication scoped to individual Redis databases.
+  humanURL: https://upstash.com/docs/redis/features/restapi
+  baseURL: https://<endpoint>.upstash.io
+  tags:
+  - Redis
+  - Serverless
+  - Edge Computing
+  properties:
+  - type: Documentation
+    url: https://upstash.com/docs/redis/features/restapi
+- aid: upstash:upstash-kafka-api
+  name: Upstash Kafka API
+  description: Kafka cluster and topic management
+  humanURL: https://upstash.com/docs/devops/developer-api
+  baseURL: https://api.upstash.com/v2
+  tags:
+  - Kafka
+  properties:
+  - type: OpenAPI
+    url: openapi/upstash-kafka-api-openapi.yml
+- aid: upstash:upstash-redis-api
+  name: Upstash Redis API
+  description: Redis database management
+  humanURL: https://upstash.com/docs/devops/developer-api
+  baseURL: https://api.upstash.com/v2
+  tags:
+  - Redis
+  properties:
+  - type: OpenAPI
+    url: openapi/upstash-redis-api-openapi.yml
+- aid: upstash:upstash-rediscommand-api
+  name: Upstash RedisCommand API
+  description: Per-database Redis command execution
+  humanURL: https://upstash.com/docs/devops/developer-api
+  baseURL: https://api.upstash.com/v2
+  tags:
+  - RedisCommand
+  properties:
+  - type: OpenAPI
+    url: openapi/upstash-rediscommand-api-openapi.yml
+- aid: upstash:upstash-teams-api
+  name: Upstash Teams API
+  description: Team and member management
+  humanURL: https://upstash.com/docs/devops/developer-api
+  baseURL: https://api.upstash.com/v2
+  tags:
+  - Teams
+  properties:
+  - type: OpenAPI
+    url: openapi/upstash-teams-api-openapi.yml
+- aid: upstash:upstash-vector-api
+  name: Upstash Vector API
+  description: Vector index management
+  humanURL: https://upstash.com/docs/devops/developer-api
+  baseURL: https://api.upstash.com/v2
+  tags:
+  - Vector
+  properties:
+  - type: OpenAPI
+    url: openapi/upstash-vector-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/upstash-agentic-access.yml
