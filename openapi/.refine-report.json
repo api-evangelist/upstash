@@ -1,0 +1,22 @@
+{
+  "provider": "upstash",
+  "sources": [
+    "upstash-kafka-api-openapi.yml",
+    "upstash-redis-api-openapi.yml",
+    "upstash-rediscommand-api-openapi.yml",
+    "upstash-teams-api-openapi.yml",
+    "upstash-vector-api-openapi.yml"
+  ],
+  "outputs": [
+    "upstash-kafka-api-openapi.yml",
+    "upstash-redis-api-openapi.yml",
+    "upstash-rediscommand-api-openapi.yml",
+    "upstash-teams-api-openapi.yml",
+    "upstash-vector-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
