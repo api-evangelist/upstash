@@ -1,0 +1,100 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Upstash APIs Kafka Redis API",
+    "version": "2.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Redis",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Redis databases",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.upstash.com/v2/redis/databases",
+            "auth": {
+              "type": "basic",
+              "username": "{{username}}",
+              "password": "{{password}}"
+            }
+          },
+          "docs": "List Redis databases"
+        },
+        {
+          "info": {
+            "name": "Create a Redis database",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.upstash.com/v2/redis/databases",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "basic",
+              "username": "{{username}}",
+              "password": "{{password}}"
+            }
+          },
+          "docs": "Create a Redis database"
+        },
+        {
+          "info": {
+            "name": "Retrieve a Redis database",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.upstash.com/v2/redis/database/:databaseId",
+            "params": [
+              {
+                "name": "databaseId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "auth": {
+              "type": "basic",
+              "username": "{{username}}",
+              "password": "{{password}}"
+            }
+          },
+          "docs": "Retrieve a Redis database"
+        },
+        {
+          "info": {
+            "name": "Delete a Redis database",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.upstash.com/v2/redis/database/:databaseId",
+            "params": [
+              {
+                "name": "databaseId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "auth": {
+              "type": "basic",
+              "username": "{{username}}",
+              "password": "{{password}}"
+            }
+          },
+          "docs": "Delete a Redis database"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

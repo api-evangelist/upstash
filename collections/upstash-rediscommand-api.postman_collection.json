@@ -1,0 +1,444 @@
+{
+  "item": [
+    {
+      "id": "ac198e25-32d3-4138-8543-a9d1e15a1e2a",
+      "name": "RedisCommand",
+      "description": {
+        "content": "Per-database Redis command execution",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "2b12daf6-7af2-45a2-abeb-035576bf971d",
+          "name": "Execute a Redis pipeline",
+          "request": {
+            "name": "Execute a Redis pipeline",
+            "description": {
+              "content": "Execute multiple Redis commands in a single round trip against the\nper-database Redis REST API. Request body is a JSON array of\ncommands, where each command is itself an array starting with the\ncommand name.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "protocol": "https",
+              "path": [
+                "pipeline"
+              ],
+              "host": [
+                "{{endpoint}}",
+                "upstash",
+                "io"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "[\n  [\n    \"<string>\",\n    \"<string>\"\n  ],\n  [\n    \"<string>\",\n    \"<string>\"\n  ]\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "c805883c-e077-4856-b5f6-389d14cfe3f4",
+              "name": "Pipeline results",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "pipeline"
+                  ],
+                  "host": [
+                    "{{endpoint}}",
+                    "upstash",
+                    "io"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "[\n  [\n    \"<string>\",\n    \"<string>\"\n  ],\n  [\n    \"<string>\",\n    \"<string>\"\n  ]\n]",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"result\": {},\n    \"error\": \"string\"\n  },\n  {\n    \"result\": {},\n    \"error\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "643fcf9b-5007-4347-8f91-af3bf638db2f",
+              "name": "Missing or invalid credentials",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "pipeline"
+                  ],
+                  "host": [
+                    "{{endpoint}}",
+                    "upstash",
+                    "io"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "[\n  [\n    \"<string>\",\n    \"<string>\"\n  ],\n  [\n    \"<string>\",\n    \"<string>\"\n  ]\n]",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d4346be6-f0c8-49c0-9473-fc8771d9f44a",
+          "name": "Execute Redis commands atomically",
+          "request": {
+            "name": "Execute Redis commands atomically",
+            "description": {
+              "content": "Execute a batch of Redis commands as an atomic MULTI/EXEC transaction.",
+              "type": "text/plain"
+            },
+            "url": {
+              "protocol": "https",
+              "path": [
+                "multi-exec"
+              ],
+              "host": [
+                "{{endpoint}}",
+                "upstash",
+                "io"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "[\n  [\n    \"<string>\",\n    \"<string>\"\n  ],\n  [\n    \"<string>\",\n    \"<string>\"\n  ]\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "6b9469f9-f438-4879-8802-9bae8bff0aea",
+              "name": "Transaction results",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "multi-exec"
+                  ],
+                  "host": [
+                    "{{endpoint}}",
+                    "upstash",
+                    "io"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "[\n  [\n    \"<string>\",\n    \"<string>\"\n  ],\n  [\n    \"<string>\",\n    \"<string>\"\n  ]\n]",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"result\": {},\n    \"error\": \"string\"\n  },\n  {\n    \"result\": {},\n    \"error\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4364ab43-8283-48f2-af2d-def89c67a44d",
+          "name": "Publish a message to a pub/sub channel",
+          "request": {
+            "name": "Publish a message to a pub/sub channel",
+            "description": {},
+            "url": {
+              "protocol": "https",
+              "path": [
+                "publish",
+                ":channel",
+                ":message"
+              ],
+              "host": [
+                "{{endpoint}}",
+                "upstash",
+                "io"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "channel",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "message",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "39d8b7d8-9239-4432-8b17-0d251c34e6fa",
+              "name": "Number of clients that received the message",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "publish",
+                    ":channel",
+                    ":message"
+                  ],
+                  "host": [
+                    "{{endpoint}}",
+                    "upstash",
+                    "io"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "channel",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "message",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"result\": 824\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.upstash.com/v2",
+      "key": "baseUrl"
+    },
+    {
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "example-12345",
+      "key": "endpoint"
+    }
+  ],
+  "info": {
+    "_postman_id": "8c1e703d-d37f-4497-9b12-4fcd7370780f",
+    "name": "Upstash APIs Kafka RedisCommand API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Upstash exposes two distinct HTTP API surfaces:\n\n1. The Developer (Management) API at https://api.upstash.com/v2 — used\n   to programmatically create and administer Upstash Redis, Kafka, and\n   Vector databases, teams, and account-level resources. Authentication\n   is HTTP Basic using account email + API key.\n\n2. The per-database Redis REST API at https://{endpoint}.upstash.io —\n   used to execute Redis commands over HTTPS from edge and serverless\n   runtimes. Authentication is a Bearer token scoped to the database\n   (or via ?_token=... query parameter).\n\nEndpoint surface confirmed against https://upstash.com/docs/devops/developer-api\nand https://upstash.com/docs/redis/features/restapi.\n\n\nContact Support:\n Name: Upstash Docs",
+      "type": "text/plain"
+    }
+  }
+}

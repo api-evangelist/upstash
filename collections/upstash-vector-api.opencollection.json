@@ -1,0 +1,34 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Upstash APIs Kafka Vector API",
+    "version": "2.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Vector",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List vector indexes",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.upstash.com/v2/vector/index",
+            "auth": {
+              "type": "basic",
+              "username": "{{username}}",
+              "password": "{{password}}"
+            }
+          },
+          "docs": "List vector indexes"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,127 @@
+{
+  "item": [
+    {
+      "id": "1c1896f5-0bfa-4459-88be-e671fb4f8a12",
+      "name": "Teams",
+      "description": {
+        "content": "Team and member management",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f0e5813d-9843-420c-b68f-84dc49003d97",
+          "name": "List teams",
+          "request": {
+            "name": "List teams",
+            "description": {},
+            "url": {
+              "protocol": "https",
+              "path": [
+                "v2",
+                "teams"
+              ],
+              "host": [
+                "api",
+                "upstash",
+                "com"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "username",
+                  "value": "{{basicAuthUsername}}"
+                },
+                {
+                  "key": "password",
+                  "value": "{{basicAuthPassword}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "18abd15f-91e7-4d8d-88e2-8e8baf5a1c2a",
+              "name": "Team collection",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "v2",
+                    "teams"
+                  ],
+                  "host": [
+                    "api",
+                    "upstash",
+                    "com"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"team_id\": \"string\",\n    \"team_name\": \"string\",\n    \"copy_cc\": false\n  },\n  {\n    \"team_id\": \"string\",\n    \"team_name\": \"string\",\n    \"copy_cc\": false\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.upstash.com/v2",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "21d954ce-9c62-46c3-a0de-5d197aa3bf24",
+    "name": "Upstash APIs Kafka Teams API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Upstash exposes two distinct HTTP API surfaces:\n\n1. The Developer (Management) API at https://api.upstash.com/v2 — used\n   to programmatically create and administer Upstash Redis, Kafka, and\n   Vector databases, teams, and account-level resources. Authentication\n   is HTTP Basic using account email + API key.\n\n2. The per-database Redis REST API at https://{endpoint}.upstash.io —\n   used to execute Redis commands over HTTPS from edge and serverless\n   runtimes. Authentication is a Bearer token scoped to the database\n   (or via ?_token=... query parameter).\n\nEndpoint surface confirmed against https://upstash.com/docs/devops/developer-api\nand https://upstash.com/docs/redis/features/restapi.\n\n\nContact Support:\n Name: Upstash Docs",
+      "type": "text/plain"
+    }
+  }
+}

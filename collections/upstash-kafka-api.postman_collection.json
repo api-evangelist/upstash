@@ -1,0 +1,129 @@
+{
+  "item": [
+    {
+      "id": "81d0493b-2478-44bd-8102-f88133807050",
+      "name": "Kafka",
+      "description": {
+        "content": "Kafka cluster and topic management",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "d66569f8-d305-4019-9f0b-f4641f14b944",
+          "name": "List Kafka clusters",
+          "request": {
+            "name": "List Kafka clusters",
+            "description": {},
+            "url": {
+              "protocol": "https",
+              "path": [
+                "v2",
+                "kafka",
+                "clusters"
+              ],
+              "host": [
+                "api",
+                "upstash",
+                "com"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "username",
+                  "value": "{{basicAuthUsername}}"
+                },
+                {
+                  "key": "password",
+                  "value": "{{basicAuthPassword}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "239d7e6e-4cb3-45eb-9fd4-a995c3429143",
+              "name": "Kafka cluster collection",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "v2",
+                    "kafka",
+                    "clusters"
+                  ],
+                  "host": [
+                    "api",
+                    "upstash",
+                    "com"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"cluster_id\": \"string\",\n    \"name\": \"string\",\n    \"region\": \"string\",\n    \"creation_time\": 7094,\n    \"state\": \"string\"\n  },\n  {\n    \"cluster_id\": \"string\",\n    \"name\": \"string\",\n    \"region\": \"string\",\n    \"creation_time\": 88,\n    \"state\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.upstash.com/v2",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "a7069734-25cd-44f5-b2af-88b092aed0a8",
+    "name": "Upstash APIs Kafka API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Upstash exposes two distinct HTTP API surfaces:\n\n1. The Developer (Management) API at https://api.upstash.com/v2 — used\n   to programmatically create and administer Upstash Redis, Kafka, and\n   Vector databases, teams, and account-level resources. Authentication\n   is HTTP Basic using account email + API key.\n\n2. The per-database Redis REST API at https://{endpoint}.upstash.io —\n   used to execute Redis commands over HTTPS from edge and serverless\n   runtimes. Authentication is a Bearer token scoped to the database\n   (or via ?_token=... query parameter).\n\nEndpoint surface confirmed against https://upstash.com/docs/devops/developer-api\nand https://upstash.com/docs/redis/features/restapi.\n\n\nContact Support:\n Name: Upstash Docs",
+      "type": "text/plain"
+    }
+  }
+}
