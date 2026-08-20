@@ -103,6 +103,8 @@ apis:
   humanURL: https://upstash.com/docs/devops/developer-api
   baseURL: https://api.upstash.com/v2
   tags:
+  - Team
+  tags_raw:
   - Teams
   properties:
   - type: OpenAPI
@@ -113,6 +115,8 @@ apis:
   humanURL: https://upstash.com/docs/devops/developer-api
   baseURL: https://api.upstash.com/v2
   tags:
+  - Vectors
+  tags_raw:
   - Vector
   properties:
   - type: OpenAPI
