@@ -134,6 +134,9 @@ apis:
   - type: OpenAPI
     url: openapi/upstash-vector-api-openapi.yml
 common:
+  - type: CapabilityMap
+    url: capabilities/upstash-capability-edges.yml
+    name: Upstash Business Capability Map
   - type: AgenticAccess
     url: agentic-access/upstash-agentic-access.yml
   - type: DomainSecurity
