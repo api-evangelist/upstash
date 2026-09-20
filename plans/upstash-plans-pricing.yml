@@ -11,6 +11,11 @@ provenance:
   grounding: every price_text was found verbatim in the fetched page text
 audience: developer-api
 pricing_basis: per-call
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-09-20'
+  managed_tier: Fixed 250MB
 published: true
 note: Redis pricing page with free, pay-as-you-go per-command, fixed tiers, Prod Pack add-on, and custom
   Enterprise. Extra databases $0.5 per database beyond 10, up to 100.
