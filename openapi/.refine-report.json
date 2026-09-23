@@ -1,11 +1,7 @@
 {
   "provider": "upstash",
   "sources": [
-    "upstash-kafka-api-openapi.yml",
-    "upstash-redis-api-openapi.yml",
-    "upstash-rediscommand-api-openapi.yml",
-    "upstash-teams-api-openapi.yml",
-    "upstash-vector-api-openapi.yml"
+    "_original/upstash-openapi.yml"
   ],
   "outputs": [
     "upstash-kafka-api-openapi.yml",
@@ -17,6 +13,16 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "upstash-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "upstash-kafka-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "upstash-redis-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "upstash-rediscommand-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "upstash-teams-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "upstash-vector-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

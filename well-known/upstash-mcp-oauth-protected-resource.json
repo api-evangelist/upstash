@@ -1,0 +1,1 @@
+{"resource":"https://mcp.upstash.com/mcp","resource_name":"Upstash MCP Server","authorization_servers":["https://clerk.upstash.com"],"scopes_supported":["openid","email","profile","offline_access"],"bearer_methods_supported":["header"]}

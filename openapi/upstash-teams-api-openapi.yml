@@ -1,9 +1,12 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Upstash APIs Kafka Teams API
+  title: Upstash Teams API
   version: 2.0.0
   summary: Developer (management) API and Redis REST API for Upstash.
-  description: "Upstash exposes two distinct HTTP API surfaces:\n\n1. The Developer (Management) API at https://api.upstash.com/v2 — used\n   to programmatically create and administer Upstash Redis, Kafka, and\n   Vector databases, teams, and account-level resources. Authentication\n   is HTTP Basic using account email + API key.\n\n2. The per-database Redis REST API at https://{endpoint}.upstash.io —\n   used to execute Redis commands over HTTPS from edge and serverless\n   runtimes. Authentication is a Bearer token scoped to the database\n   (or via ?_token=... query parameter).\n\nEndpoint surface confirmed against https://upstash.com/docs/devops/developer-api\nand https://upstash.com/docs/redis/features/restapi.\n"
+  description: 'Upstash exposes two distinct HTTP API surfaces:
+
+
+    1.'
   contact:
     name: Upstash Docs
     url: https://upstash.com/docs
