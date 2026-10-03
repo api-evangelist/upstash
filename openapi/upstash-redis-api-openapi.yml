@@ -110,23 +110,6 @@ paths:
           $ref: '#/components/responses/NotFound'
 components:
   schemas:
-    RedisDatabase:
-      type: object
-      properties:
-        database_id:
-          type: string
-        database_name:
-          type: string
-        region:
-          type: string
-        port:
-          type: integer
-        creation_time:
-          type: integer
-        state:
-          type: string
-        endpoint:
-          type: string
     Error:
       type: object
       properties:
@@ -147,6 +130,23 @@ components:
         tls:
           type: boolean
           default: true
+    RedisDatabase:
+      type: object
+      properties:
+        database_id:
+          type: string
+        database_name:
+          type: string
+        region:
+          type: string
+        port:
+          type: integer
+        creation_time:
+          type: integer
+        state:
+          type: string
+        endpoint:
+          type: string
   responses:
     NotFound:
       description: Resource not found
