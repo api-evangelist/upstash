@@ -109,6 +109,19 @@ paths:
         '404':
           $ref: '#/components/responses/NotFound'
 components:
+  responses:
+    Unauthorized:
+      description: Missing or invalid credentials
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    NotFound:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
   schemas:
     Error:
       type: object
@@ -117,19 +130,6 @@ components:
           type: string
         message:
           type: string
-    RedisDatabaseInput:
-      type: object
-      required:
-      - name
-      - region
-      properties:
-        name:
-          type: string
-        region:
-          type: string
-        tls:
-          type: boolean
-          default: true
     RedisDatabase:
       type: object
       properties:
@@ -147,19 +147,19 @@ components:
           type: string
         endpoint:
           type: string
-  responses:
-    NotFound:
-      description: Resource not found
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Error'
-    Unauthorized:
-      description: Missing or invalid credentials
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Error'
+    RedisDatabaseInput:
+      type: object
+      required:
+      - name
+      - region
+      properties:
+        name:
+          type: string
+        region:
+          type: string
+        tls:
+          type: boolean
+          default: true
   parameters:
     DatabaseId:
       name: databaseId

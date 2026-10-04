@@ -135,21 +135,6 @@ paths:
                   result:
                     type: integer
 components:
-  schemas:
-    Error:
-      type: object
-      properties:
-        error:
-          type: string
-        message:
-          type: string
-    RedisCommandResult:
-      type: object
-      properties:
-        result:
-          description: Result value (type depends on command)
-        error:
-          type: string
   responses:
     Unauthorized:
       description: Missing or invalid credentials
@@ -157,6 +142,21 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/Error'
+  schemas:
+    RedisCommandResult:
+      type: object
+      properties:
+        result:
+          description: Result value (type depends on command)
+        error:
+          type: string
+    Error:
+      type: object
+      properties:
+        error:
+          type: string
+        message:
+          type: string
   securitySchemes:
     basicAuth:
       type: http
