@@ -15,3 +15,16 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: upstash-datadog-own
+  label: Datadog (own)
+  partner: datadog
+  partner_name: Datadog (own)
+  category: Cloud
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://github.com/DataDog/integrations-extras/tree/master/upstash
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
