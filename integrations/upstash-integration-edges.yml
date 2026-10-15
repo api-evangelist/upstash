@@ -4,6 +4,7 @@ checked:
 - datadog/integrations/datadog-integration-edges.yml
 - https://github.com/run-llama/llama_index/tree/main/llama-index-integrations
 - https://marketplace.visualstudio.com/vscode
+- strapi/integrations/strapi-integration-edges.yml
 - stripe/integrations/stripe-integration-edges.yml
 marketplace_apps: []
 edges:
@@ -78,5 +79,22 @@ edges:
   matched_by: verified-domain-table
   detected_by: sweep-rag-vector.py
   first_seen: '2026-10-15'
+- partner_name: Strapi (own)
+  partner: strapi
+  partner_match: mirror
+  mirror_match: domain+name-among-holders
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://market.strapi.io/plugins/@upstash-strapi-plugin-upstash-search
+  mirror_of: strapi/integrations/strapi-integration-edges.yml
+  apps:
+  - Upstash Search
+  listing_count: 1
+  detected: '2026-10-15'
+  detected_by: mirror-platform-listings.py
+  category: Strapi plugin
 source:
 - https://marketplace.visualstudio.com/vscode
