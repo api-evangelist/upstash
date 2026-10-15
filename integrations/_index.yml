@@ -15,6 +15,17 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: upstash-llamaindex
+  label: LlamaIndex
+  partner: llamaindex
+  partner_name: LlamaIndex
+  type: coverage
+  channel: partner-built
+  evidence: https://github.com/run-llama/llama_index/tree/main/llama-index-integrations/vector_stores/llama-index-vector-stores-upstash
+  source: edge
+  relationship: system-coverage
+  status: not-a-workflow
+  arazzo: null
 - slug: upstash-datadog-own
   label: Datadog (own)
   partner: datadog
@@ -28,14 +39,16 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: upstash-llamaindex
-  label: LlamaIndex
-  partner: llamaindex
-  partner_name: LlamaIndex
-  type: coverage
+- slug: upstash-stripe-own
+  label: Stripe (own)
+  partner: stripe
+  partner_name: Stripe (own)
+  category: developer_tools
+  type: marketplace
+  marketplace: own
   channel: partner-built
-  evidence: https://github.com/run-llama/llama_index/tree/main/llama-index-integrations/vector_stores/llama-index-vector-stores-upstash
+  evidence: https://marketplace.stripe.com/apps/upstash-provider-integration
   source: edge
-  relationship: system-coverage
+  relationship: platform-app
   status: not-a-workflow
   arazzo: null
