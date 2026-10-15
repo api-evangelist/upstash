@@ -2,6 +2,7 @@ generated: '2026-10-14'
 method: searched
 checked:
 - datadog/integrations/datadog-integration-edges.yml
+- https://github.com/run-llama/llama_index/tree/main/llama-index-integrations
 - https://marketplace.visualstudio.com/vscode
 marketplace_apps: []
 edges:
@@ -40,5 +41,24 @@ edges:
   detected: '2026-10-14'
   detected_by: mirror-platform-listings.py
   category: Cloud
+- partner_name: LlamaIndex
+  partner: llamaindex
+  partner_match: framework
+  channel: partner-built
+  direction: partner-built
+  type: coverage
+  relationship: system-coverage
+  evidence: https://github.com/run-llama/llama_index/tree/main/llama-index-integrations/vector_stores/llama-index-vector-stores-upstash
+  coverage_role:
+  - vector-store
+  framework_signals:
+    packages:
+    - llama-index-vector-stores-upstash
+    roles:
+    - vector-store
+    vendor_domain: upstash.com
+  matched_by: verified-domain-table
+  detected_by: sweep-rag-vector.py
+  first_seen: '2026-10-15'
 source:
 - https://marketplace.visualstudio.com/vscode
