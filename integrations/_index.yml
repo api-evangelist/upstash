@@ -15,17 +15,6 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: upstash-llamaindex
-  label: LlamaIndex
-  partner: llamaindex
-  partner_name: LlamaIndex
-  type: coverage
-  channel: partner-built
-  evidence: https://github.com/run-llama/llama_index/tree/main/llama-index-integrations/vector_stores/llama-index-vector-stores-upstash
-  source: edge
-  relationship: system-coverage
-  status: not-a-workflow
-  arazzo: null
 - slug: upstash-datadog-own
   label: Datadog (own)
   partner: datadog
@@ -48,6 +37,56 @@
   marketplace: own
   channel: partner-built
   evidence: https://marketplace.stripe.com/apps/upstash-provider-integration
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: upstash-llamaindex
+  label: LlamaIndex
+  partner: llamaindex
+  partner_name: LlamaIndex
+  type: coverage
+  channel: partner-built
+  evidence: https://github.com/run-llama/llama_index/tree/main/llama-index-integrations/vector_stores/llama-index-vector-stores-upstash
+  source: edge
+  relationship: system-coverage
+  status: not-a-workflow
+  arazzo: null
+- slug: upstash-pipedream
+  label: Pipedream
+  partner: pipedream
+  partner_name: Pipedream
+  type: marketplace
+  marketplace: pipedream-components
+  channel: open-source-node
+  evidence: https://github.com/PipedreamHQ/pipedream/tree/94800dd6de6640b942c65ea7ee655f71ac56d438/components/upstash_redis
+  source: edge
+  relationship: ipaas-bridge
+  contract_reference:
+    register: Pipedream components (PipedreamHQ/pipedream components/)
+    spec_file: null
+    role: ipaas-connector:pipedream
+    registered_name: upstash redis
+    matched_domain: upstash.com
+    matched_by: domain+name-among-holders
+    detected_by: sweep-workflow-automation.py
+    detected: '2026-10-15'
+    signal_note: one edge per (provider, platform); actions, triggers and usage counts are context, never read
+    app_slug: upstash_redis
+    actions: true
+    sources: false
+    builder: Pipedream repo (component)
+  status: pending-generation
+  arazzo: null
+- slug: upstash-strapi-own
+  label: Strapi (own)
+  partner: strapi
+  partner_name: Strapi (own)
+  category: Strapi plugin
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://market.strapi.io/plugins/@upstash-strapi-plugin-upstash-search
   source: edge
   relationship: platform-app
   status: not-a-workflow
