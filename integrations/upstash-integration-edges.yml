@@ -8,6 +8,12 @@ checked:
 - https://marketplace.visualstudio.com/vscode
 - strapi/integrations/strapi-integration-edges.yml
 - stripe/integrations/stripe-integration-edges.yml
+- https://api.github.com
+- https://claude-plugins.dev/sitemap.xml
+- https://github.com/VoltAgent/awesome-agent-skills
+- https://officialskills.sh/sitemap.xml
+- https://skillsmp.com/sitemap.xml
+- https://www.skills.sh/sitemap.xml
 marketplace_apps: []
 edges:
 - partner_name: Visual Studio Code Marketplace
@@ -124,5 +130,115 @@ edges:
     builder: Pipedream repo (component)
   detected_by: sweep-workflow-automation.py
   first_seen: '2026-10-15'
+- partner_name: Agent Skills (own GitHub org)
+  partner: null
+  partner_match: register
+  type: register
+  direction: provider-built
+  category: Agent Skills package
+  evidence: https://github.com/upstash/context7
+  channel: provider-built
+  relationship: compatible
+  shape: agent-skills
+  evidence_kind: own-repo
+  degree: skill-repo
+  report_only: true
+  agent_skills:
+    org: upstash
+    current: true
+    repos:
+    - repo: upstash/context7
+      archived: false
+      lapsed: false
+      pushed: '2026-10-20'
+    - repo: upstash/redis-js
+      archived: false
+      lapsed: false
+      pushed: '2026-10-20'
+    - repo: upstash/skills
+      archived: false
+      lapsed: false
+      pushed: '2026-10-19'
+  contract_reference:
+    register: 'provider''s own GitHub org (GitHub REST API: repo + git tree holds SKILL.md)'
+    spec_file: null
+    standard: Agent Skills (agentskills.io)
+    role: agent-skills-repo
+    matched_org: upstash
+    matched_by: org-profile-domain-among-claimants:upstash.com
+    detected_by: sweep-agent-skills.py
+    detected: '2026-10-20'
+  detected_by: sweep-agent-skills.py
+  first_seen: '2026-10-20'
+- partner_name: skills.sh
+  partner: null
+  partner_match: register
+  type: register
+  direction: partner-built
+  category: Agent Skills register
+  evidence: https://www.skills.sh/upstash/context7
+  channel: standard-directory
+  relationship: compatible
+  shape: agent-skills
+  evidence_kind: register-listing
+  degree: listed
+  report_only: true
+  agent_skills_register:
+    repos:
+    - upstash/context7
+    - upstash/redis-js
+    - upstash/skills
+    repo_verified: true
+    signal_note: the provider's own-org repos the register lists; skill / install counts never read
+  contract_reference:
+    register: skills.sh (public sitemap / list)
+    spec_file: null
+    standard: Agent Skills (agentskills.io)
+    role: agent-skills-listing
+    matched_org: upstash
+    matched_by: org-profile-domain-among-claimants:upstash.com
+    sample_skills:
+    - context7-cli
+    - context7-mcp
+    - documentation-lookup
+    - find-docs
+    - redis-js
+    detected_by: sweep-agent-skills.py
+    detected: '2026-10-20'
+  detected_by: sweep-agent-skills.py
+  first_seen: '2026-10-20'
+- partner_name: SkillsMP (skillsmp.com)
+  partner: null
+  partner_match: register
+  type: register
+  direction: partner-built
+  category: Agent Skills register
+  evidence: https://skillsmp.com/creators/upstash/context7
+  channel: standard-directory
+  relationship: compatible
+  shape: agent-skills
+  evidence_kind: register-listing
+  degree: listed
+  report_only: true
+  agent_skills_register:
+    repos:
+    - upstash
+    - upstash/context7
+    repo_verified: true
+    signal_note: the provider's own-org repos the register lists; skill / install counts never read
+  contract_reference:
+    register: SkillsMP (skillsmp.com) (public sitemap / list)
+    spec_file: null
+    standard: Agent Skills (agentskills.io)
+    role: agent-skills-listing
+    matched_org: upstash
+    matched_by: org-profile-domain-among-claimants:upstash.com
+    sample_skills:
+    - packages-pi-skills-context7-docs
+    - skills-context7-cli
+    detected_by: sweep-agent-skills.py
+    detected: '2026-10-20'
+  detected_by: sweep-agent-skills.py
+  first_seen: '2026-10-20'
 source:
 - https://marketplace.visualstudio.com/vscode
