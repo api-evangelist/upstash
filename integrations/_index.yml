@@ -52,6 +52,19 @@
   relationship: system-coverage
   status: not-a-workflow
   arazzo: null
+- slug: upstash-strapi-own
+  label: Strapi (own)
+  partner: strapi
+  partner_name: Strapi (own)
+  category: Strapi plugin
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://market.strapi.io/plugins/@upstash-strapi-plugin-upstash-search
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
 - slug: upstash-pipedream
   label: Pipedream
   partner: pipedream
@@ -59,7 +72,7 @@
   type: marketplace
   marketplace: pipedream-components
   channel: open-source-node
-  evidence: https://github.com/PipedreamHQ/pipedream/tree/94800dd6de6640b942c65ea7ee655f71ac56d438/components/upstash_redis
+  evidence: https://github.com/PipedreamHQ/pipedream/tree/d5872355ef27b4efa769f05352f2820c299a456e/components/upstash_redis
   source: edge
   relationship: ipaas-bridge
   contract_reference:
@@ -76,18 +89,5 @@
     actions: true
     sources: false
     builder: Pipedream repo (component)
-  status: not-a-workflow
-  arazzo: null
-- slug: upstash-strapi-own
-  label: Strapi (own)
-  partner: strapi
-  partner_name: Strapi (own)
-  category: Strapi plugin
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  evidence: https://market.strapi.io/plugins/@upstash-strapi-plugin-upstash-search
-  source: edge
-  relationship: platform-app
   status: not-a-workflow
   arazzo: null
