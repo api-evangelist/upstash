@@ -15,32 +15,6 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: upstash-datadog-own
-  label: Datadog (own)
-  partner: datadog
-  partner_name: Datadog (own)
-  category: Cloud
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  evidence: https://github.com/DataDog/integrations-extras/tree/master/upstash
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
-- slug: upstash-stripe-own
-  label: Stripe (own)
-  partner: stripe
-  partner_name: Stripe (own)
-  category: developer_tools
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  evidence: https://marketplace.stripe.com/apps/upstash-provider-integration
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: upstash-llamaindex
   label: LlamaIndex
   partner: llamaindex
@@ -50,19 +24,6 @@
   evidence: https://github.com/run-llama/llama_index/tree/main/llama-index-integrations/vector_stores/llama-index-vector-stores-upstash
   source: edge
   relationship: system-coverage
-  status: not-a-workflow
-  arazzo: null
-- slug: upstash-strapi-own
-  label: Strapi (own)
-  partner: strapi
-  partner_name: Strapi (own)
-  category: Strapi plugin
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  evidence: https://market.strapi.io/plugins/@upstash-strapi-plugin-upstash-search
-  source: edge
-  relationship: platform-app
   status: not-a-workflow
   arazzo: null
 - slug: upstash-pipedream
@@ -158,5 +119,57 @@
     - skills-context7-cli
     detected_by: sweep-agent-skills.py
     detected: '2026-10-20'
+  status: not-a-workflow
+  arazzo: null
+- slug: upstash-datadog-own
+  label: Datadog (own)
+  partner: datadog
+  partner_name: Datadog (own)
+  category: Cloud
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://github.com/DataDog/integrations-extras/tree/master/upstash
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: upstash-stripe-own
+  label: Stripe (own)
+  partner: stripe
+  partner_name: Stripe (own)
+  category: developer_tools
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://marketplace.stripe.com/apps/upstash-provider-integration
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: upstash-strapi-own
+  label: Strapi (own)
+  partner: strapi
+  partner_name: Strapi (own)
+  category: Strapi plugin
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://market.strapi.io/plugins/@upstash-strapi-plugin-upstash-search
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: upstash-pulumi-pulumi-registry
+  label: Pulumi (pulumi-registry)
+  partner: pulumi
+  partner_name: Pulumi (pulumi-registry)
+  category: infrastructure-as-code provider registry listing
+  type: marketplace
+  marketplace: pulumi-registry
+  channel: partner-built
+  evidence: https://www.pulumi.com/registry/packages/upstash/
+  source: edge
+  relationship: platform-app
   status: not-a-workflow
   arazzo: null
